@@ -6,51 +6,6 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
 </head>
 <body>
-    <script>
-        let camera, scene, renderer, cube;
-
-        function init() {
-            // Initialize scene
-            scene = new THREE.Scene();
-            scene.background = new THREE.Color(0xefe7db); // Beige
-            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-            // Initialize renderer
-            renderer = new THREE.WebGLRenderer();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            document.body.appendChild(renderer.domElement);
-            
-            // Initialize moveable object (cube)
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Green
-            cube = new THREE.Mesh(geometry, material);
-            scene.add(cube);
-
-            camera.position.z = 5;
-
-            document.addEventListener('keydown', onDocumentKeyDown, false);
-            animate();
-        }
-
-        function onDocumentKeyDown(event) {
-            var keyCode = event.which;
-            if (keyCode == 87) { // W key
-                cube.position.y += 0.1;
-            } else if (keyCode == 83) { // S key
-                cube.position.y -= 0.1;
-            } else if (keyCode == 65) { // A key
-                cube.position.x -= 0.1;
-            } else if (keyCode == 68) { // D key
-                cube.position.x += 0.1;
-            }
-        }
-
-        function animate() {
-            requestAnimationFrame(animate);
-            renderer.render(scene, camera);
-        }
-
-        init();
-    </script>
+    <script src="scene.js" type="text/javascript"></script>
 </body>
 </html>
