@@ -1,5 +1,5 @@
 import * as THREE from '/three.module.js';
-//import {FontLoader } from '/FontLoader.js';
+//import { FontLoader } from '/FontLoader.js';
 //import { TextGeometry } from '/TextGeometry.js';
 
 //THREE.Cache.enabled = true;
